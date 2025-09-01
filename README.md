@@ -67,6 +67,7 @@ And that’s it — in just a few steps, you’ve installed ArgoCD, accessed it 
 
 Have you tried running ArgoCD in your own cluster yet? If so, what was the biggest win you noticed?
 
-Author
+Article by:
+
 Shiller Calixte 
 @ DevSpace365
