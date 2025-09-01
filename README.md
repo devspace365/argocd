@@ -6,17 +6,17 @@ If you’re working with Kubernetes and looking to streamline GitOps workflows, 
 
 In this quick guide, I’ll walk you through how to install ArgoCD on your cluster and access it locally in your browser. Let’s dive in! 🚀
 
-1. Install ArgoCD
+## 1. Install ArgoCD
 
 First, create a namespace for ArgoCD and apply the installation manifest:
-
+'''
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
+'''
 
 This will spin up all the necessary ArgoCD components inside the argocd namespace.
 
-2. Verify the Pods
+## 2. Verify the Pods
 
 Once the installation starts, you’ll want to make sure the pods are running properly. Use the following command to watch their status in real-time:
 
