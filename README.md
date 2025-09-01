@@ -66,3 +66,7 @@ Wrapping Up
 And that’s it — in just a few steps, you’ve installed ArgoCD, accessed it locally, and are ready to embrace GitOps workflows. From here, you can start connecting your repositories and managing deployments with confidence.
 
 Have you tried running ArgoCD in your own cluster yet? If so, what was the biggest win you noticed?
+
+Author
+Shiller Calixte 
+@ DevSpace365
