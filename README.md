@@ -49,7 +49,7 @@ Inside the YAML output, you’ll find an encoded string under password. Copy it.
 
 The password is base64 encoded, so let’s decode it with a simple command:
 ```
-echo WTlRWE90aTlubWR5dzhjUA== | base64 --decode
+echo 10305ENCODEDPASSWORD6080== | base64 --decode
 ```
 
 Replace the string above with your copied value. This gives you the plain-text password needed for login.
