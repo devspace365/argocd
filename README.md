@@ -34,9 +34,12 @@ Save and exit, and Kubernetes will update the service type.
 
 ## 4. Retrieve the Admin Password
 
-To log in to the ArgoCD dashboard, you’ll need the initial admin password. First, grab the secret:
+To list all secrets in the argocd namespace, the command is:
 ```
 kubectl get secret -n argocd
+```
+To log in to the ArgoCD dashboard, you’ll need the initial admin password. First, grab the secret:
+```
 kubectl edit secret argocd-initial-admin-secret -n argocd
 ```
 
