@@ -16,12 +16,14 @@ This will spin up all the necessary ArgoCD components inside the argocd namespac
 
 ## 2. Verify the Pods
 
-Once the installation starts, you’ll want to make sure the pods are running properly. Use the following command to watch their status in real-time:
+Once the installation starts, verify that the ArgoCD pods are running properly. Use the following command to watch their status in real-time:
 ```
 kubectl get pods -n argocd -w
 ```
 
-Wait until all pods show a Running or Completed status before moving forward.
+Ensure all pods show the status Running.
+
+If you see PodInitializing, wait until the status changes to Running before proceeding to the next section.
 
 ## 3. Expose the ArgoCD Server
 
