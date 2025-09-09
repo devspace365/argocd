@@ -1,10 +1,17 @@
-# How to Install and Access ArgoCD on Your Local Kubernetes Cluster
+# How to Install and Access ArgoCD on Your Local Cluster
 
 If you’re working with Kubernetes and looking to streamline GitOps workflows, ArgoCD is one of the most powerful tools you can add to your toolkit. It allows you to manage deployments declaratively, keeping your applications and infrastructure in sync with your Git repositories.
 
 In this quick guide, I’ll walk you through how to install ArgoCD on your cluster and access it locally in your browser. Let’s dive in! 🚀
 
-## 1. Install ArgoCD
+## Prerequisites
+
+kind
+kubectl
+kubernetes
+
+
+## 1. Install ArgoCD on your Cluster
 
 First, create a namespace for ArgoCD and apply the installation manifest:
 ```
@@ -56,7 +63,7 @@ echo 10305ENCODEDPASSWORD6080== | base64 --decode
 
 Replace the string above with your copied value. This gives you the plain-text password needed for login.
 
-## 6. Port Forward to Your Localhost
+## 6. Access ArgoCD UI "User Interface" in your browser 
 
 Finally, to open ArgoCD in your browser, forward the service port:
 ```
