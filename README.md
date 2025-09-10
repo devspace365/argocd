@@ -41,7 +41,7 @@ kubectl edit svc argocd-server -n argocd
 
 Save and exit, and Kubernetes will update the service type.
 
-## 4. Retrieve the Admin Password
+## 4. Retrieve the Admin Password and Decode it
 
 To list all secrets in the argocd namespace, the command is:
 ```
@@ -54,8 +54,6 @@ kubectl edit secret argocd-initial-admin-secret -n argocd
 
 Inside the YAML output, you’ll find an encoded string under password. Copy it.
 
-## 5. Decode the Password
-
 The password is base64 encoded, so let’s decode it with a simple command:
 ```
 echo 10305ENCODEDPASSWORD6080== | base64 --decode
@@ -63,6 +61,11 @@ echo 10305ENCODEDPASSWORD6080== | base64 --decode
 
 Replace the string above with your copied value. This gives you the plain-text password needed for login.
 
+## 5. Alternate way to Retrieve the Password and Decode it with one Command
+
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+```
 ## 6. Access ArgoCD UI "User Interface" in your browser 
 
 To see all the services that were deployed:
