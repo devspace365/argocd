@@ -65,9 +65,14 @@ Replace the string above with your copied value. This gives you the plain-text p
 
 ## 6. Access ArgoCD UI "User Interface" in your browser 
 
+To see all the services that were deployed:
+```
+kubectl get svc -n argocd
+```
+
 Finally, to open ArgoCD in your browser, forward the service port:
 ```
-kubectl port-forward svc/argocd-server -n argocd 8080:443
+kubectl port-forward svc/argocd-server -n argocd 8080:443 &
 ```
 
 Now you can head to https://localhost:8080
